@@ -3,22 +3,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <head>
     <meta charset="UTF-8">
-    <title>Secret Santa</title>
+    <title>Secret Santa Decrypter</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Grandstander&display=swap" rel="stylesheet"> 
   </head>
 
   <body>
-    <h1 class="heading">Secret Santa</h1>
-    <input id="input" type="text" placeholder="Name" autofocus></input>
+    <h1 class="heading">Secret Santa Decrypter</h1>
+    <input id="input" type="text" placeholder="Name Key" autofocus></input>
 
     <div class="inputBtns">
-      <button onclick="addParticipant()">Add</button>
-      <button onclick="randomise()">Shuffle</button>
-      <button onclick="toggleResults()" id="hide">Reveal All</button> 
+      <button onclick="decrypt()" id="hide">Reveal Your Recipient</button> 
     </div>
 
-    <div id="result"></div>
+    <div id="result" class="pContainer">
+      <p class="whiteTxt">You have:</p>
+      <p id="recipient"></p>
+    </div>
 
     <script type="text/javascript" src="index.js"></script>
   </body>
