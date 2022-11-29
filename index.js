@@ -1,5 +1,5 @@
 function decrypt() {
-  var nameKey = document.getElementById("input").value;
+  var nameKey = document.getElementById("input").value.toLowerCase();
   var decryptedParticipant = "";
   var cipherKey = 13;
 
@@ -7,7 +7,6 @@ function decrypt() {
     var charCode = nameKey.charAt(i).charCodeAt();
 
     //lower case ASCII alphabet is 97(a) to 122(z)
-    //TODO: make this work for upper case alphabet too
     if (charCode - cipherKey < 97) { //start at beginning of alphabet
       charCode -= cipherKey - 26;
     } else {
